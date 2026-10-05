@@ -76,14 +76,14 @@ Some official servers can't be added in one click. Their entry carries `setup` i
 
 | `kind` | Meaning | Extra fields |
 | --- | --- | --- |
-| `byo-oauth` | Each user registers their own OAuth client with the vendor (no dynamic client registration). | `steps` (plain lines; an https address in one is shown as a link), `redirectHint` (the vendor's name for the redirect field; the client fills in its own address), `clients` (AI apps that can take a pre-registered client: `claude`, `codex`), optional `scopes` (space-separated, as the vendor's guide lists them) |
+| `byo-oauth` | Each user registers their own OAuth client with the vendor (no dynamic client registration). | `steps` (plain lines; an https address in one is shown as a link), `redirectHint` (the vendor's name for the redirect field; the client fills in its own address), `clients` (AI apps that can take a pre-registered client: `claude`, `codex`), optional `scopes` (space-separated, as the vendor's guide lists them), optional `secretless` (the vendor's sign-in takes the client ID alone, so no secret is asked for) |
 | `approved-clients` | The vendor only lets its approved AI apps sign in. | optional `clients`: the approved apps among `claude` and `codex`, which a client may add it to |
 | `admin` | An administrator has to turn it on or register an app first. | none |
 | `per-org` | The address holds the user's own subdomain or org. | `urlTemplate` (the remote's own URL, with one `{subdomain}` or `{org}` as the whole first host label or one whole path segment), `label` |
 
 Every kind needs `reason` (one plain line) and `guideUrl` (the vendor's own https page). A field its kind doesn't use is an error. A remote URL may hold a placeholder only on a `per-org` or `admin` entry, described in the remote's `variables`. The paseo-mcp plugin reads `setup` from 0.16.0. A client that doesn't read `setup` would show these entries as a normal card, which is why they are only in `v0.2/servers.json`.
 
-A `byo-oauth` entry is limited to vendors the client itself ships a list of (paseo-mcp: Google, HubSpot and Zoom), at their own MCP host, and every link in its `guideUrl` and `steps` must be on that vendor's own sites. The user pastes a real client secret on that screen, and Claude Code sends it to whichever sign-in server the MCP server names, so a list must not be able to point one somewhere else.
+A `byo-oauth` entry is limited to vendors the client itself ships a list of (paseo-mcp: Google, HubSpot and Zoom, and Meta from 0.18.3), at their own MCP host, and every link in its `guideUrl` and `steps` must be on that vendor's own sites. The user pastes a real client secret on that screen (unless the entry is `secretless`), and Claude Code sends it to whichever sign-in server the MCP server names, so a list must not be able to point one somewhere else.
 
 ## Checks
 

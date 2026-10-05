@@ -3,6 +3,57 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.day/mcp",
+        "title": "Day AI",
+        "description": "Ask about and update the customers, opportunities, and meetings in your Day AI CRM.",
+        "version": "1.0.0",
+        "websiteUrl": "https://day.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://day.ai/api/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.github.itsjustanks/mcp-gallery": {
+          "displayName": "Day AI",
+          "category": "crm",
+          "iconUrl": "https://avatars.githubusercontent.com/u/139149377?v=4",
+          "auth": "oauth",
+          "docsUrl": "https://day.ai/mcp",
+          "verifiedAt": "2026-10-05"
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.fathom.api/mcp",
+        "title": "Fathom",
+        "description": "Search and read your Fathom meeting recordings and summaries.",
+        "version": "1.0.0",
+        "websiteUrl": "https://fathom.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.fathom.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.github.itsjustanks/mcp-gallery": {
+          "displayName": "Fathom",
+          "category": "productivity",
+          "auth": "oauth",
+          "docsUrl": "https://developers.fathom.ai/mcp-docs",
+          "verifiedAt": "2026-10-05"
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "ai.fireflies/fireflies",
         "title": "Fireflies",
         "description": "Search your Fireflies meeting transcripts, summaries, and action items.",
@@ -48,6 +99,56 @@
           "auth": "oauth",
           "docsUrl": "https://docs.granola.ai/help-center/sharing/integrations/mcp",
           "verifiedAt": "2026-09-28"
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.otter/mcp",
+        "title": "Otter.ai",
+        "description": "Search your Otter meeting notes and read full transcripts.",
+        "version": "1.0.0",
+        "websiteUrl": "https://otter.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.otter.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.github.itsjustanks/mcp-gallery": {
+          "displayName": "Otter.ai",
+          "category": "productivity",
+          "auth": "oauth",
+          "docsUrl": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+          "verifiedAt": "2026-10-05"
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "ai.supercut/mcp",
+        "title": "Supercut",
+        "description": "Search your Supercut screen recordings and read their transcripts and comments.",
+        "version": "1.0.0",
+        "websiteUrl": "https://supercut.ai",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.supercut.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.github.itsjustanks/mcp-gallery": {
+          "displayName": "Supercut",
+          "category": "productivity",
+          "auth": "oauth",
+          "docsUrl": "https://help.supercut.ai/en/articles/15163981-model-context-protocol-mcp",
+          "verifiedAt": "2026-10-05"
         }
       }
     },
@@ -139,7 +240,7 @@
         "name": "com.airtable/mcp",
         "title": "Airtable",
         "description": "Read and write Airtable bases, tables, and records.",
-        "version": "1.0.0",
+        "version": "0.1.0",
         "websiteUrl": "https://airtable.com",
         "remotes": [
           {
@@ -155,7 +256,7 @@
           "iconUrl": "https://avatars.githubusercontent.com/u/9687261?v=4",
           "auth": "oauth",
           "docsUrl": "https://support.airtable.com/docs/using-the-airtable-mcp-server",
-          "verifiedAt": "2026-09-24"
+          "verifiedAt": "2026-10-05"
         }
       }
     },
@@ -243,6 +344,32 @@
             "reason": "A Box admin has to turn on the Box MCP server in the Admin Console and give you a client ID and secret first.",
             "guideUrl": "https://developer.box.com/guides/box-mcp/remote/"
           }
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "com.cal/mcp",
+        "title": "Cal.com",
+        "description": "Check availability and create, move, or cancel Cal.com bookings.",
+        "version": "1.0.0",
+        "websiteUrl": "https://cal.com",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.cal.com/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.github.itsjustanks/mcp-gallery": {
+          "displayName": "Cal.com",
+          "category": "productivity",
+          "iconUrl": "https://avatars.githubusercontent.com/u/79145102?v=4",
+          "auth": "oauth",
+          "docsUrl": "https://cal.com/docs/mcp-server",
+          "verifiedAt": "2026-10-05"
         }
       }
     },
@@ -445,6 +572,49 @@
             "clients": [
               "claude",
               "codex"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "com.facebook/ads",
+        "title": "Meta Ads",
+        "description": "Read and manage your Meta ad accounts, campaigns, ads and catalogs, across Facebook and Instagram.",
+        "version": "1.0.0",
+        "websiteUrl": "https://www.facebook.com/business/ads",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.facebook.com/ads"
+          }
+        ]
+      },
+      "_meta": {
+        "io.github.itsjustanks/mcp-gallery": {
+          "displayName": "Meta Ads",
+          "category": "marketing",
+          "iconUrl": "https://avatars.githubusercontent.com/u/69631?v=4",
+          "auth": "oauth",
+          "docsUrl": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-get-started",
+          "verifiedAt": "2026-10-05",
+          "setup": {
+            "kind": "byo-oauth",
+            "secretless": true,
+            "reason": "Outside Claude.ai and Meta's listed apps, Meta asks you to connect through your own Meta developer app. It needs the App ID only.",
+            "guideUrl": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-get-started",
+            "steps": [
+              "Create a Meta developer app, or open one you have: https://developers.facebook.com/apps",
+              "Add the use case \"Create & manage ads with ads MCP server\".",
+              "Add these permissions: ads_mcp_management, ads_read, ads_management, pages_manage_ads, catalog_management, business_management, pages_show_list and instagram_basic.",
+              "In Facebook Login for Business settings, add the redirect address below.",
+              "Copy the App ID from the app's settings into the box below. There's no secret to copy."
+            ],
+            "redirectHint": "Valid OAuth Redirect URIs",
+            "clients": [
+              "claude"
             ]
           }
         }
@@ -704,6 +874,47 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "com.googleapis.stitch/mcp",
+        "title": "Google Stitch",
+        "description": "Create and edit app screen designs in Google Stitch from chat.",
+        "version": "1.0.0",
+        "websiteUrl": "https://stitch.withgoogle.com",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://stitch.googleapis.com/mcp",
+            "headers": [
+              {
+                "name": "X-Goog-Api-Key",
+                "description": "Stitch API key, made on the Stitch settings page.",
+                "isRequired": true,
+                "isSecret": true,
+                "value": "{api_key}",
+                "variables": {
+                  "api_key": {
+                    "description": "Stitch API key, from Stitch settings",
+                    "isRequired": true,
+                    "isSecret": true
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.github.itsjustanks/mcp-gallery": {
+          "displayName": "Google Stitch",
+          "category": "design",
+          "auth": "token",
+          "docsUrl": "https://stitch.withgoogle.com/docs/mcp/setup",
+          "verifiedAt": "2026-10-05"
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "com.hubspot/mcp",
         "title": "HubSpot",
         "description": "Search and update your HubSpot contacts, companies, and deals.",
@@ -764,6 +975,74 @@
           "auth": "oauth",
           "docsUrl": "https://developers.intercom.com/docs/guides/mcp",
           "verifiedAt": "2026-09-24"
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "com.klaviyo/mcp",
+        "title": "Klaviyo",
+        "description": "Look at Klaviyo campaigns, flows, lists, and results, and draft new emails.",
+        "version": "1.0.0",
+        "websiteUrl": "https://www.klaviyo.com",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.klaviyo.com/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.github.itsjustanks/mcp-gallery": {
+          "displayName": "Klaviyo",
+          "category": "marketing",
+          "iconUrl": "https://avatars.githubusercontent.com/u/1947230?v=4",
+          "auth": "oauth",
+          "docsUrl": "https://developers.klaviyo.com/en/docs/connect_to_the_klaviyo_mcp_server",
+          "verifiedAt": "2026-10-05"
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "com.mailchimp/transactional",
+        "title": "Mailchimp Transactional",
+        "description": "Send and track transactional emails and templates with Mailchimp Transactional (Mandrill).",
+        "version": "1.0.0",
+        "websiteUrl": "https://mailchimp.com",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mandrillapp.com/mcp",
+            "headers": [
+              {
+                "name": "Authorization",
+                "description": "Mailchimp Transactional API key, sent as 'Bearer <key>'.",
+                "isRequired": true,
+                "isSecret": true,
+                "value": "Bearer {api_key}",
+                "variables": {
+                  "api_key": {
+                    "description": "Mailchimp Transactional API key",
+                    "isRequired": true,
+                    "isSecret": true
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.github.itsjustanks/mcp-gallery": {
+          "displayName": "Mailchimp Transactional",
+          "category": "marketing",
+          "iconUrl": "https://avatars.githubusercontent.com/u/216758?v=4",
+          "auth": "token",
+          "docsUrl": "https://mailchimp.com/developer/transactional/guides/how-to-use-mailchimps-transactional-messaging-mcp/",
+          "verifiedAt": "2026-10-05"
         }
       }
     },
@@ -984,6 +1263,32 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "com.pipedrive/mcp",
+        "title": "Pipedrive",
+        "description": "Search and update Pipedrive deals, people, organisations, and activities.",
+        "version": "1.0.0",
+        "websiteUrl": "https://www.pipedrive.com",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.pipedrive.ai/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.github.itsjustanks/mcp-gallery": {
+          "displayName": "Pipedrive",
+          "category": "crm",
+          "iconUrl": "https://avatars.githubusercontent.com/u/191836?v=4",
+          "auth": "oauth",
+          "docsUrl": "https://support.pipedrive.com/article/mcp-claude",
+          "verifiedAt": "2026-10-05"
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "com.postman/postman-mcp-server",
         "title": "Postman",
         "description": "Access Postman workspaces, collections, environments, and APIs.",
@@ -1187,6 +1492,32 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "com.superhuman/mail",
+        "title": "Superhuman Mail",
+        "description": "Search, read, and draft email in your Superhuman inbox.",
+        "version": "1.0.0",
+        "websiteUrl": "https://superhuman.com",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.mail.superhuman.com/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.github.itsjustanks/mcp-gallery": {
+          "displayName": "Superhuman Mail",
+          "category": "productivity",
+          "iconUrl": "https://avatars.githubusercontent.com/u/11510192?v=4",
+          "auth": "oauth",
+          "docsUrl": "https://help.superhuman.com/hc/en-us/articles/46005696690317-Superhuman-Mail-MCP-Server",
+          "verifiedAt": "2026-10-05"
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "com.vercel/mcp",
         "title": "Vercel",
         "description": "Search Vercel docs and manage projects, deployments, and logs.",
@@ -1303,40 +1634,26 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "com.zendesk/mcp",
-        "title": "Zendesk",
-        "description": "Search and update tickets, users, and help center articles in your Zendesk.",
+        "name": "dev.composio/connect",
+        "title": "Composio Connect",
+        "description": "One server for 1,000+ apps, like Meta Ads and Google Ads. Composio holds each app's sign-in.",
         "version": "1.0.0",
-        "websiteUrl": "https://www.zendesk.com",
+        "websiteUrl": "https://composio.dev",
         "remotes": [
           {
             "type": "streamable-http",
-            "url": "https://{subdomain}.zendesk.com/api/mcp",
-            "variables": {
-              "subdomain": {
-                "description": "Your Zendesk subdomain: the yourcompany in yourcompany.zendesk.com",
-                "isRequired": true,
-                "isSecret": false
-              }
-            }
+            "url": "https://connect.composio.dev/mcp"
           }
         ]
       },
       "_meta": {
         "io.github.itsjustanks/mcp-gallery": {
-          "displayName": "Zendesk",
-          "category": "support",
-          "iconUrl": "https://avatars.githubusercontent.com/u/11525?v=4",
+          "displayName": "Composio Connect",
+          "category": "automation",
+          "iconUrl": "https://avatars.githubusercontent.com/u/128464815?v=4",
           "auth": "oauth",
-          "docsUrl": "https://www.zendesk.com/marketplace/apps/support/1191848/mcp-server/",
-          "verifiedAt": "2026-09-28",
-          "setup": {
-            "kind": "per-org",
-            "reason": "Zendesk runs this server on your own Zendesk address, so it needs your subdomain.",
-            "guideUrl": "https://www.zendesk.com/marketplace/apps/support/1191848/mcp-server/",
-            "urlTemplate": "https://{subdomain}.zendesk.com/api/mcp",
-            "label": "Your Zendesk subdomain"
-          }
+          "docsUrl": "https://docs.composio.dev/docs/composio-connect",
+          "verifiedAt": "2026-10-05"
         }
       }
     },
@@ -1375,10 +1692,36 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "io.github.PostHog/mcp",
+        "title": "PostHog",
+        "description": "Query PostHog analytics, feature flags, and errors.",
+        "version": "1.0.1",
+        "websiteUrl": "https://posthog.com",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.posthog.com/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.github.itsjustanks/mcp-gallery": {
+          "displayName": "PostHog",
+          "category": "analytics",
+          "iconUrl": "https://avatars.githubusercontent.com/u/60330232?v=4",
+          "auth": "oauth",
+          "docsUrl": "https://posthog.com/docs/model-context-protocol",
+          "verifiedAt": "2026-10-05"
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
         "name": "io.github.github/github-mcp-server",
         "title": "GitHub",
         "description": "Work with GitHub repositories, issues, pull requests, and Actions.",
-        "version": "1.0.0",
+        "version": "1.13.0",
         "websiteUrl": "https://github.com",
         "repository": {
           "url": "https://github.com/github/github-mcp-server",
@@ -1414,7 +1757,33 @@
           "iconUrl": "https://avatars.githubusercontent.com/u/9919?v=4",
           "auth": "token",
           "docsUrl": "https://github.com/github/github-mcp-server",
-          "verifiedAt": "2026-09-24"
+          "verifiedAt": "2026-10-05"
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "io.github.mapbox/mcp-server",
+        "title": "Mapbox",
+        "description": "Search places, get directions and travel times, and make maps with Mapbox.",
+        "version": "0.14.0",
+        "websiteUrl": "https://www.mapbox.com",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.mapbox.com/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.github.itsjustanks/mcp-gallery": {
+          "displayName": "Mapbox",
+          "category": "developer",
+          "iconUrl": "https://avatars.githubusercontent.com/u/600935?v=4",
+          "auth": "oauth",
+          "docsUrl": "https://docs.mapbox.com/api/guides/mcp-server/",
+          "verifiedAt": "2026-10-05"
         }
       }
     },
@@ -1588,7 +1957,7 @@
         "name": "io.github.upstash/context7",
         "title": "Context7",
         "description": "Fetch current, version-specific library documentation and code examples.",
-        "version": "1.0.0",
+        "version": "4.1.1",
         "websiteUrl": "https://context7.com",
         "repository": {
           "url": "https://github.com/upstash/context7",
@@ -1624,7 +1993,32 @@
           "iconUrl": "https://avatars.githubusercontent.com/u/74989412?v=4",
           "auth": "none",
           "docsUrl": "https://github.com/upstash/context7",
-          "verifiedAt": "2026-09-24"
+          "verifiedAt": "2026-10-05"
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "io.gleap/mcp",
+        "title": "Gleap",
+        "description": "Work with Gleap tickets, contacts, and help center articles from chat.",
+        "version": "1.0.0",
+        "websiteUrl": "https://www.gleap.io",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.gleap.io/mcp"
+          }
+        ]
+      },
+      "_meta": {
+        "io.github.itsjustanks/mcp-gallery": {
+          "displayName": "Gleap",
+          "category": "support",
+          "auth": "oauth",
+          "docsUrl": "https://help.gleap.io/en/articles/369-the-gleap-mcp-server",
+          "verifiedAt": "2026-10-05"
         }
       }
     },
@@ -1788,6 +2182,6 @@
     }
   ],
   "metadata": {
-    "count": 55
+    "count": 69
   }
 }

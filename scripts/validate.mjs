@@ -187,6 +187,8 @@ const BYO_OAUTH_VENDORS = [
   { vendor: "Google", server: /^[a-z0-9-]+mcp\.googleapis\.com$/, links: ["developers.google.com", "console.cloud.google.com", "cloud.google.com", "workspace.google.com", "support.google.com"] },
   { vendor: "HubSpot", server: /^mcp\.hubspot\.com$/, links: ["developers.hubspot.com", "knowledge.hubspot.com", "app.hubspot.com", "www.hubspot.com"] },
   { vendor: "Zoom", server: /^mcp\.zoom\.us$/, links: ["developers.zoom.us", "marketplace.zoom.us", "support.zoom.com", "www.zoom.com"] },
+  // paseo-mcp 0.18.3 and later.
+  { vendor: "Meta", server: /^mcp\.facebook\.com$/, links: ["developers.facebook.com", "www.facebook.com", "business.facebook.com"] },
 ];
 
 function httpsHost(link) {
@@ -246,6 +248,7 @@ function checkSetup(where, server, meta) {
       }
     }
   }
+  if (setup.secretless !== undefined && setup.kind !== "byo-oauth") fail(where, "only a byo-oauth setup can be secretless");
   if (setup.kind === "approved-clients" && setup.steps) fail(where, "an approved-clients setup links the vendor's page instead of steps");
   for (const step of setup.steps ?? []) {
     if (step.includes("${")) fail(where, "setup step holds ${…}");

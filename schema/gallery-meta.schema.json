@@ -118,6 +118,10 @@
           },
           "description": "byo-oauth: the AI apps that can take a pre-registered OAuth client for this server. approved-clients: the vendor's approved apps among these."
         },
+        "secretless": {
+          "type": "boolean",
+          "description": "byo-oauth: the vendor's sign-in takes the client ID alone, with no client secret (a public client). The client asks for no secret. Read by paseo-mcp 0.18.3 and later."
+        },
         "scopes": {
           "type": "string",
           "minLength": 1,
